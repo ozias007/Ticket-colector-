@@ -1,0 +1,88 @@
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    box-shadow: 7px -7px 15px gray;
+    background-color: white;
+}
+
+h1{
+    text-align: center;
+    color: rgb(4, 7, 47);
+}
+
+.menu{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: rgb(4, 7, 47);
+}
+
+.menu-container{
+    position: absolute;
+    top: 0;
+    padding-left: 0;
+}
+
+.nav-link{
+    padding: 15px;
+    color: white;
+    width: 300px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-link:hover{
+    background-color: crimson;
+    color: white;
+}
+
+.activeNavButton{
+    background-color: crimson;
+    color: white;
+}
+
+.dashboard{
+    position: absolute;
+    left: 300px;
+    top: 60px;
+}
+
+.addButton{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0px 8px 16px 0px gray;
+    padding: 0;
+    z-index: 2000;
+}
+
+.addButton:hover{
+    background-color: crimson;
+    color: white;
+}
+
+.addButton i{
+    font-size: larger;
+    margin: 20px;
+    color: rgb(4, 7, 47);
+}
+
+.card{
+    max-width: 300px;
+    min-height: 400px;
+    box-shadow: 0px 8px 16px 0px gray;
+}
+
+.hide{
+    visibility: hidden;
+}

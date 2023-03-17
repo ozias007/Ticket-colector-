@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+        <!--Fonawesome icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fa fa-bug"></i> Bug Tracker</h1>
+        <div class="card">
+            <div class="inner-box " id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form>
+                        <input type="text" class="input-box" id="name" placeholder=" Your username" required>
+                        <input type="password" class="input-box" id="password" placeholder=" Your password" required>
+                        <button type="submit" class="submit-btn" onclick="main()" >Submit</button>
+                        <input type="checkbox"><span>Rememebr Me</span>
+
+                    </form>
+
+                    <button type="button" class="btn" onclick="openregister()"> I am new here</button>
+                    <a href="">Forgot Password</a>
+                </div>
+                <div class="card-back">
+                    <h2>REGISTRATION</h2>
+                    <form action="">
+                        <input type="text" class="input-box" placeholder=" Your username" required>
+                        <input type="email" class="input-box" placeholder=" Your Email" required>
+                        <input type="password" class="input-box" placeholder="  password" required>
+                        <button type="submit" class="submit-btn" >Submit</button>
+                        <input type="checkbox"><span>Rememebr Me</span>
+
+                    </form>
+                    <button type="button" class="btn" onclick="openlogin()"> I have an acoount</button>
+
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let card = document.getElementById("card");
+
+        function openregister(){
+            card.style.transform="rotateY(-180deg)";
+        }
+
+        function openlogin(){
+            card.style.transform="rotateY(0deg)";
+        }
+
+         function main(){
+            let name=document.getElementById("name").value;
+            let password=document.getElementById("password").value;
+
+            if ((name=="admin") && (password=="1234")){
+		        document.getElementById("password").value = "";
+                location.href = "AppScreen.html";
+            } else{
+                alert("Please enter the correct password and username.");
+            }
+         }
+    </script>
+</body>
+</html>
